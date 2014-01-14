@@ -1,5 +1,5 @@
-# -*- encoding: utf-8 -*-
 lib = File.expand_path("../lib", __FILE__)
+# -*- encoding: utf-8 -*-
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "fontcustom/version"
 
@@ -20,7 +20,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "json", "~>1.4"
   gem.add_dependency "thor", "~>0.14"
-  gem.add_dependency "listen", "~>1.0"
+  gem.add_dependency "listen", ">1.0"
 
   gem.add_development_dependency "rake"
   gem.add_development_dependency "bundler"

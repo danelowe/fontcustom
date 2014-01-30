@@ -77,7 +77,7 @@ def createGlyph( name, source, code ):
             glyph.left_side_bearing = glyph.right_side_bearing = 0
             glyph.round()
         else:
-            glyph.width = 512
+            glyph.width = 28
 
 for glyph, data in manifest['glyphs'].iteritems():
     name = createGlyph(glyph, data['source'], data['codepoint'])

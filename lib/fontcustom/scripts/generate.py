@@ -34,8 +34,8 @@ font.encoding = 'UnicodeFull'
 #font.em = 512
 #font.ascent = 448
 #font.descent = 64
-font.design_size = 28
-font.em = 28
+font.design_size = 26
+font.em = 36
 font.ascent = 24
 font.descent = 4
 font.fontname = options['font_name']
@@ -77,7 +77,7 @@ def createGlyph( name, source, code ):
             glyph.left_side_bearing = glyph.right_side_bearing = 0
             glyph.round()
         else:
-            glyph.width = 28
+            glyph.width = 36
 
 for glyph, data in manifest['glyphs'].iteritems():
     name = createGlyph(glyph, data['source'], data['codepoint'])

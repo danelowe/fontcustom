@@ -34,15 +34,16 @@ font.encoding = 'UnicodeFull'
 #font.em = 512
 #font.ascent = 448
 #font.descent = 64
-font.design_size = 26
-font.em = 36
-font.ascent = 24
-font.descent = 4
+
+#font.design_size = 14
+#font.em = 14
+#font.ascent = 24
+#font.descent = 4
 font.fontname = options['font_name']
 font.familyname = options['font_name']
 font.fullname = options['font_name']
 if options['autowidth']:
-    font.autoWidth(0, 0, 512)
+    font.autoWidth(0, 0, 36)
 
 # NOTE not referenced anywhere, safe to remove?
 KERNING = 15
@@ -98,7 +99,7 @@ try:
     manifest['fonts'].append(fontfile + '.svg')
 
     # Hint the TTF file
-    subprocess.call('ttfautohint -s -f -n -W ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
+    #subprocess.call('ttfautohint -s -f -n -W ' + fontfile + '.ttf ' + fontfile + '-hinted.ttf > /dev/null 2>&1 && mv ' + fontfile + '-hinted.ttf ' + fontfile + '.ttf', shell=True)
 
     # Fix SVG header for webkit
     # from: https://github.com/fontello/font-builder/blob/master/bin/fontconvert.py
